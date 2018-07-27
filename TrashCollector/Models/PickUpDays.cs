@@ -9,6 +9,7 @@ namespace TrashCollector.Models
     public class PickUpDays
     {   [Key]
         public int Id { get; set; }
+
         public string DayOfTheWeek { get; set; }
     }
 }

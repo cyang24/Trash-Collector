@@ -25,16 +25,14 @@ namespace TrashCollector.Models
         [Display(Name = "Zip Code")]
         public int ZipCode { get; set; }
 
-        [Display(Name = "Email")]
-        public string Email { get; set; }
-
-        //[ForeignKey("PickUpDays")]
-        //[Display(Name = "Day Of The Week")]
-        //public int PickUpID { get; set; }
-        //public PickUpDays PickUpDay { get; set; }
 
 
-        //public IEnumerable<PickUpDays> PickUpDays { get; set; }
+        [ForeignKey("PickUpDays")]
+        [Display(Name = "Trash Day Selection")]
+        public int PickUpDayID { get; set; }
+        public PickUpDays PickUpDay { get; set; }
+
+        public IEnumerable<PickUpDays> PickUpDays { get; set; }
 
 
 
