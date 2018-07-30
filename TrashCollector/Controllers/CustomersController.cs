@@ -13,7 +13,7 @@ namespace TrashCollector.Controllers
     public class CustomersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         // GET: Customers
         public ActionResult Index()
         {
@@ -38,7 +38,11 @@ namespace TrashCollector.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            return View();
+            Customer customer = new Customer()
+            {
+                PickUpDays = db.PickUpDays.ToList()
+            };
+            return View(customer);
         }
 
         // POST: Customers/Create
@@ -46,7 +50,7 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDay")] Customer customer)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID")] Customer customer)
         {
             if (ModelState.IsValid)
             {

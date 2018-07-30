@@ -51,7 +51,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.PickUpDayId, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.PickUpDayId, new SelectList(Model.PickUpDays, "Id", "Name"), "", new { @class = "form-control" })
+            @Html.DropDownListFor(model => model.PickUpDayId, new SelectList(Model.PickUpDays, "Id", "DayOfTheWeek"), "", new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.PickUpDayId, "", new { @class = "text-danger" })
         </div>
     </div>
