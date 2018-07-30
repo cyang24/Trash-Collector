@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201807301552054_updated pickup.Designer.cs">
       <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807301655033_User Id.cs" />
+    <Compile Include="Migrations\201807301655033_User Id.Designer.cs">
+      <DependentUpon>201807301655033_User Id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -374,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807301552054_updated pickup.resx">
       <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807301655033_User Id.resx">
+      <DependentUpon>201807301655033_User Id.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

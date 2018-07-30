@@ -42,6 +42,7 @@ namespace TrashCollector.Controllers
             {
                 PickUpDays = db.PickUpDays.ToList()
             };
+
             return View(customer);
         }
 
@@ -82,7 +83,7 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,Email,Password")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode")] Customer customer)
         {
             if (ModelState.IsValid)
             {
