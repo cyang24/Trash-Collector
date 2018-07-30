@@ -163,6 +163,14 @@ namespace TrashCollector.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRole);
+                    if (model.UserRole == "Customer")
+                    { return RedirectToAction("Create", "Customers");
+                    }
+                    if (model.UserRole == "Employee")
+                    {
+                        return RedirectToAction("Create", "Employees");
+                    }
+                    
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
@@ -422,6 +430,7 @@ namespace TrashCollector.Controllers
 
             base.Dispose(disposing);
         }
+
 
         #region Helpers
         // Used for XSRF protection when adding external logins

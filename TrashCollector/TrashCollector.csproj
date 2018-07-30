@@ -227,6 +227,22 @@
     <Compile Include="Migrations\201807271919406_remove email from classes.Designer.cs">
       <DependentUpon>201807271919406_remove email from classes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807272030166_Custor ID .cs" />
+    <Compile Include="Migrations\201807272030166_Custor ID .Designer.cs">
+      <DependentUpon>201807272030166_Custor ID .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807272043327_customr Id Add2.cs" />
+    <Compile Include="Migrations\201807272043327_customr Id Add2.Designer.cs">
+      <DependentUpon>201807272043327_customr Id Add2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807301539303_pick up day added.cs" />
+    <Compile Include="Migrations\201807301539303_pick up day added.Designer.cs">
+      <DependentUpon>201807301539303_pick up day added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807301552054_updated pickup.cs" />
+    <Compile Include="Migrations\201807301552054_updated pickup.Designer.cs">
+      <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -234,7 +250,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PickUpDays.cs" />
-    <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -347,6 +362,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807271919406_remove email from classes.resx">
       <DependentUpon>201807271919406_remove email from classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807272030166_Custor ID .resx">
+      <DependentUpon>201807272030166_Custor ID .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807272043327_customr Id Add2.resx">
+      <DependentUpon>201807272043327_customr Id Add2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807301539303_pick up day added.resx">
+      <DependentUpon>201807301539303_pick up day added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807301552054_updated pickup.resx">
+      <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

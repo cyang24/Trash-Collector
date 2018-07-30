@@ -12,18 +12,18 @@ namespace TrashCollector
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            createRoles();
+            CreateRoles();
             
         }
 
-        private void createRoles()
+        private void CreateRoles()
         {
             ApplicationDbContext context = new ApplicationDbContext();
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            if (!roleManager.RoleExists("Visitor"))
+            if (!roleManager.RoleExists("Customer"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Visitor";
+                role.Name = "Customer";
                 roleManager.Create(role);
             }
             if (!roleManager.RoleExists("Employee"))
@@ -39,5 +39,6 @@ namespace TrashCollector
                 roleManager.Create(role);
             }
         }
+
     }
 }

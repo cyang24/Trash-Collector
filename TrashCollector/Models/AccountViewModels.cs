@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollector.Models
 {
@@ -83,6 +84,11 @@ namespace TrashCollector.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //[ForeignKey("Customers")]
+        //[Display(Name = "Customer ID")]
+        //public int CustomerID { get; set; }
+        //public Customer Customer { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -113,4 +119,5 @@ namespace TrashCollector.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
 }
