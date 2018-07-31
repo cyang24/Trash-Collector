@@ -33,11 +33,11 @@ namespace TrashCollector.Models
 
         [Display(Name = "Trash Day Selection")]
         public int PickUpDayId { get; set; }
-        public PickUpDays PickUpDay { get; set; }
-
-        [Display(Name = "Extra Pick Up Request Day")]
+        
+        [Display(Name = "Extra Pick Up")]
         public int XtraDayPickUp { get; set; }
-        public PickUpDays PickUpDayXtra { get; set; }
+
+        public PickUpDays PickUpDay { get; set; }
 
         public IEnumerable<PickUpDays> PickUpDays { get; set; }
 

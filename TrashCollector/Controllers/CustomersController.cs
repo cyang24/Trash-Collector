@@ -24,11 +24,16 @@ namespace TrashCollector.Controllers
         // GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
+            Customer customer = new Customer()
+            {
+                PickUpDays = db.PickUpDays.ToList()
+            };
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
+            customer = db.Customers.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -68,16 +73,15 @@ namespace TrashCollector.Controllers
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
-            Customer customer = new Customer()
-            {
-                PickUpDays = db.PickUpDays.ToList()
-            };
+            
 
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            customer = db.Customers.Find(id);
+            Customer customer = db.Customers.Find(id);
+            customer.PickUpDays = db.PickUpDays.ToList();
+       
             if (customer == null)
             {
                 return HttpNotFound();
