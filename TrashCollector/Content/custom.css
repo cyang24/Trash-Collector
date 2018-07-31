@@ -7,6 +7,9 @@
     color:aliceblue;
 }
 
+a {
+color: #888888;
+}
 
 
 .bg-dark{
@@ -15,5 +18,4 @@
 
 h1 {
     color:snow;
-
 }

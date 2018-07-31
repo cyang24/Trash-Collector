@@ -30,11 +30,17 @@ namespace TrashCollector.Models
 
 
         [ForeignKey("PickUpDay")]
+
         [Display(Name = "Trash Day Selection")]
         public int PickUpDayId { get; set; }
         public PickUpDays PickUpDay { get; set; }
 
+        [Display(Name = "Extra Pick Up Request Day")]
+        public int XtraDayPickUp { get; set; }
+        public PickUpDays PickUpDayXtra { get; set; }
+
         public IEnumerable<PickUpDays> PickUpDays { get; set; }
+
 
         [ForeignKey("User")]
         public string UserId { get; set; }

@@ -7,13 +7,13 @@ namespace TrashCollector.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InvoiceOptions : IMigrationMetadata
+    public sealed partial class ExtraDay : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InvoiceOptions));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ExtraDay));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807311334135_Invoice Options"; }
+            get { return "201807311417214_Extra Day"; }
         }
         
         string IMigrationMetadata.Source

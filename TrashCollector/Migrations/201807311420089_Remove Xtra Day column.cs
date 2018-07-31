@@ -3,7 +3,7 @@ namespace TrashCollector.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InvoiceOptions : DbMigration
+    public partial class RemoveXtraDaycolumn : DbMigration
     {
         public override void Up()
         {

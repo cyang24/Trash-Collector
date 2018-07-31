@@ -253,9 +253,13 @@
     <Compile Include="Migrations\201807302043243_test column.Designer.cs">
       <DependentUpon>201807302043243_test column.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311334135_Invoice Options.cs" />
-    <Compile Include="Migrations\201807311334135_Invoice Options.Designer.cs">
-      <DependentUpon>201807311334135_Invoice Options.cs</DependentUpon>
+    <Compile Include="Migrations\201807311417214_Extra Day.cs" />
+    <Compile Include="Migrations\201807311417214_Extra Day.Designer.cs">
+      <DependentUpon>201807311417214_Extra Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311420089_Remove Xtra Day column.cs" />
+    <Compile Include="Migrations\201807311420089_Remove Xtra Day column.Designer.cs">
+      <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -430,8 +434,11 @@
     <EmbeddedResource Include="Migrations\201807302043243_test column.resx">
       <DependentUpon>201807302043243_test column.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311334135_Invoice Options.resx">
-      <DependentUpon>201807311334135_Invoice Options.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807311417214_Extra Day.resx">
+      <DependentUpon>201807311417214_Extra Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311420089_Remove Xtra Day column.resx">
+      <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
