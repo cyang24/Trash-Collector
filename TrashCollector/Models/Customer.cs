@@ -42,6 +42,15 @@ namespace TrashCollector.Models
         public IEnumerable<PickUpDays> PickUpDays { get; set; }
 
 
+
+        [ForeignKey("PickUpConfirmation")]
+
+        [Display(Name = "Pick Up Status")]
+        public string PickUpStatus { get; set; }
+        public PickUpConfirmation PickUpConfirmation{ get; set; }
+
+        public IEnumerable<PickUpConfirmation> PickConfirmations { get; set; }
+
         [ForeignKey("User")]
         public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -11,120 +10,107 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
-    public class CustomersController : Controller
+    public class PickUpConfirmationsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        
-        // GET: Customers
+
+        // GET: PickUpConfirmations
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            return View(db.PickUpConfirmations.ToList());
         }
 
-        // GET: Customers/Details/5
-        public ActionResult Details(int? id)
+        // GET: PickUpConfirmations/Details/5
+        public ActionResult Details(string id)
         {
-            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            //customer = db.PickUpDays.Include(p=>p.DayOfTheWeek).ToList();
-
-            if (customer == null)
+            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            if (pickUpConfirmation == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(pickUpConfirmation);
         }
 
-        // GET: Customers/Create
+        // GET: PickUpConfirmations/Create
         public ActionResult Create()
         {
-            Customer customer = new Customer()
-            {
-                PickUpDays = db.PickUpDays.ToList()
-            };
-
-            return View(customer);
+            return View();
         }
 
-        // POST: Customers/Create
+        // POST: PickUpConfirmations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID")] Customer customer)
+        public ActionResult Create([Bind(Include = "PickUpStatus")] PickUpConfirmation pickUpConfirmation)
         {
             if (ModelState.IsValid)
             {
-                customer.UserId = User.Identity.GetUserId();
-                db.Customers.Add(customer);
+                db.PickUpConfirmations.Add(pickUpConfirmation);
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                return RedirectToAction("Index");
             }
 
-            return View(customer);
+            return View(pickUpConfirmation);
         }
 
-        // GET: Customers/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            
-
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customer customer = db.Customers.Find(id);
-            customer.PickUpDays = db.PickUpDays.ToList();
-       
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customer);
-        }
-
-        // POST: Customers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID,XtraDayPickUp")] Customer customer)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(customer).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Details");
-            }
-            return View(customer);
-        }
-
-        // GET: Customers/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: PickUpConfirmations/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            if (pickUpConfirmation == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(pickUpConfirmation);
         }
 
-        // POST: Customers/Delete/5
+        // POST: PickUpConfirmations/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "PickUpStatus")] PickUpConfirmation pickUpConfirmation)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(pickUpConfirmation).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(pickUpConfirmation);
+        }
+
+        // GET: PickUpConfirmations/Delete/5
+        public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            if (pickUpConfirmation == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pickUpConfirmation);
+        }
+
+        // POST: PickUpConfirmations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            Customer customer = db.Customers.Find(id);
-            db.Customers.Remove(customer);
+            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            db.PickUpConfirmations.Remove(pickUpConfirmation);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
