@@ -25,6 +25,9 @@ namespace TrashCollector.Models
         [Display(Name = "Zip Code")]
         public int ZipCode { get; set; }
 
+        [Display(Name = "Invoice")]
+        public double Invoice { get; }
+
 
         [ForeignKey("PickUpDay")]
         [Display(Name = "Trash Day Selection")]

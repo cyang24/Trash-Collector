@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url('garbage truck.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    height: 400px;
+    background-position: center 20%;
+    color:aliceblue;
+}
+
+
+
+.bg-dark{
+    background-color: indianred;
+}
+
+h1 {
+    color:snow;
+
+}
