@@ -261,6 +261,14 @@
     <Compile Include="Migrations\201807311420089_Remove Xtra Day column.Designer.cs">
       <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311445513_Employee Zip Code Added.cs" />
+    <Compile Include="Migrations\201807311445513_Employee Zip Code Added.Designer.cs">
+      <DependentUpon>201807311445513_Employee Zip Code Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311456249_employee login.cs" />
+    <Compile Include="Migrations\201807311456249_employee login.Designer.cs">
+      <DependentUpon>201807311456249_employee login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -439,6 +447,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807311420089_Remove Xtra Day column.resx">
       <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311445513_Employee Zip Code Added.resx">
+      <DependentUpon>201807311445513_Employee Zip Code Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311456249_employee login.resx">
+      <DependentUpon>201807311456249_employee login.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
