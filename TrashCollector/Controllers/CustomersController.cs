@@ -16,9 +16,52 @@ namespace TrashCollector.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         
         // GET: Customers
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Customers.ToList());
+        //}
+
+        //Filter : Customers
+
+        public ActionResult Index(string sortOrder, string searchString, int? id)
         {
-            return View(db.Customers.ToList());
+            Employee employee = new Employee();
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var customerList = from s in db.Customers
+                           select s;
+
+            string currentUser = User.Identity.GetUserId();
+            var employeeInfo = db.Employees.Where(c => c.UserId.Equals(currentUser)).Single();
+            int theZipCode = employeeInfo.ZipCode;
+            customerList = customerList.Where(s => s.ZipCode == theZipCode);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                //int theZipCode = employee.ZipCode;
+                //var theZipCode =  db.Employees.Include(p => p.ZipCode).Where(m => m.Id == id).Single();
+                //customerList = customerList.Where(s => s.ZipCode == theZipCode);
+
+                customerList = customerList.Where(s => s.PickUpDay.DayOfTheWeek.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    customerList = customerList.OrderByDescending(s => s.LastName);
+                    break;
+                case "Date":
+                    customerList = customerList.OrderBy(s => s.ZipCode);
+                    break;
+                case "date_desc":
+                    customerList = customerList.OrderBy(s => s.Address);
+                    break;
+                default:
+                    customerList = customerList.OrderBy(s => s.LastName);
+                    break;
+            }
+
+            return View(customerList.ToList());
         }
 
         // GET: Customers/Details/5

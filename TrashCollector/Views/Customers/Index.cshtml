@@ -11,7 +11,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+
 <table class="table">
+    <tr>
+        <th class="header">
+            @Html.ActionLink("Customer Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th class="header">
+            @Html.ActionLink("Contact Name", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+    </tr>
+
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -26,34 +45,35 @@
             @Html.DisplayNameFor(model => model.ZipCode)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>*@
+                @Html.DisplayNameFor(model => model.Email)
+            </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ZipCode)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>*@
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
