@@ -29,8 +29,7 @@ namespace TrashCollector.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            //customer = db.PickUpDays.Include(p=>p.DayOfTheWeek).ToList();
+            Customer customer = db.Customers.Include(p=>p.PickUpDay).Where(m=>m.Id == id).FirstOrDefault();
 
             if (customer == null)
             {
@@ -62,7 +61,7 @@ namespace TrashCollector.Controllers
                 customer.UserId = User.Identity.GetUserId();
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                return RedirectToAction("Details", new { id = customer.Id });
             }
 
             return View(customer);
@@ -92,13 +91,13 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID,XtraDayPickUp")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID,ExtraDayPickUp")] Customer customer)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                return RedirectToAction("Details", new { id = customer.Id });
             }
             return View(customer);
         }

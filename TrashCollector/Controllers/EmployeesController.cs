@@ -47,14 +47,14 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName")] Employee employee)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,ZipCode")] Employee employee)
         {
             if (ModelState.IsValid)
             {
                 employee.UserId = User.Identity.GetUserId();
                 db.Employees.Add(employee);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = employee.Id });
             }
 
             return View(employee);
@@ -80,13 +80,13 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,Email,Password")] Employee employee)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,ZipCode")] Employee employee)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = employee.Id });
             }
             return View(employee);
         }

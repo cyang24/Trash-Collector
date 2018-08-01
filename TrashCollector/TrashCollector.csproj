@@ -206,89 +206,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807261555224_initial.cs" />
-    <Compile Include="Migrations\201807261555224_initial.Designer.cs">
-      <DependentUpon>201807261555224_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201808011455364_init.cs" />
+    <Compile Include="Migrations\201808011455364_init.Designer.cs">
+      <DependentUpon>201808011455364_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807261910049_Roles.cs" />
-    <Compile Include="Migrations\201807261910049_Roles.Designer.cs">
-      <DependentUpon>201807261910049_Roles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807271335247_pickupdays added.cs" />
-    <Compile Include="Migrations\201807271335247_pickupdays added.Designer.cs">
-      <DependentUpon>201807271335247_pickupdays added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807271340008_updated days.cs" />
-    <Compile Include="Migrations\201807271340008_updated days.Designer.cs">
-      <DependentUpon>201807271340008_updated days.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807271544159_remove password update customer.cs" />
-    <Compile Include="Migrations\201807271544159_remove password update customer.Designer.cs">
-      <DependentUpon>201807271544159_remove password update customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807271919406_remove email from classes.cs" />
-    <Compile Include="Migrations\201807271919406_remove email from classes.Designer.cs">
-      <DependentUpon>201807271919406_remove email from classes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807272030166_Custor ID .cs" />
-    <Compile Include="Migrations\201807272030166_Custor ID .Designer.cs">
-      <DependentUpon>201807272030166_Custor ID .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807272043327_customr Id Add2.cs" />
-    <Compile Include="Migrations\201807272043327_customr Id Add2.Designer.cs">
-      <DependentUpon>201807272043327_customr Id Add2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807301539303_pick up day added.cs" />
-    <Compile Include="Migrations\201807301539303_pick up day added.Designer.cs">
-      <DependentUpon>201807301539303_pick up day added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807301552054_updated pickup.cs" />
-    <Compile Include="Migrations\201807301552054_updated pickup.Designer.cs">
-      <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807301655033_User Id.cs" />
-    <Compile Include="Migrations\201807301655033_User Id.Designer.cs">
-      <DependentUpon>201807301655033_User Id.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807302043243_test column.cs" />
-    <Compile Include="Migrations\201807302043243_test column.Designer.cs">
-      <DependentUpon>201807302043243_test column.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311417214_Extra Day.cs" />
-    <Compile Include="Migrations\201807311417214_Extra Day.Designer.cs">
-      <DependentUpon>201807311417214_Extra Day.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311420089_Remove Xtra Day column.cs" />
-    <Compile Include="Migrations\201807311420089_Remove Xtra Day column.Designer.cs">
-      <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311445513_Employee Zip Code Added.cs" />
-    <Compile Include="Migrations\201807311445513_Employee Zip Code Added.Designer.cs">
-      <DependentUpon>201807311445513_Employee Zip Code Added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311456249_employee login.cs" />
-    <Compile Include="Migrations\201807311456249_employee login.Designer.cs">
-      <DependentUpon>201807311456249_employee login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311531453_Update Xtra Days Customer.cs" />
-    <Compile Include="Migrations\201807311531453_Update Xtra Days Customer.Designer.cs">
-      <DependentUpon>201807311531453_Update Xtra Days Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311921293_PickUpStatus.cs" />
-    <Compile Include="Migrations\201807311921293_PickUpStatus.Designer.cs">
-      <DependentUpon>201807311921293_PickUpStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311924518_pick confiratin updat.cs" />
-    <Compile Include="Migrations\201807311924518_pick confiratin updat.Designer.cs">
-      <DependentUpon>201807311924518_pick confiratin updat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311930275_pickupconfirmatins.cs" />
-    <Compile Include="Migrations\201807311930275_pickupconfirmatins.Designer.cs">
-      <DependentUpon>201807311930275_pickupconfirmatins.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807312000297_confirmation.cs" />
-    <Compile Include="Migrations\201807312000297_confirmation.Designer.cs">
-      <DependentUpon>201807312000297_confirmation.cs</DependentUpon>
+    <Compile Include="Migrations\201808011508472_extra day.cs" />
+    <Compile Include="Migrations\201808011508472_extra day.Designer.cs">
+      <DependentUpon>201808011508472_extra day.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -432,75 +356,18 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807261555224_initial.resx">
-      <DependentUpon>201807261555224_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807261910049_Roles.resx">
-      <DependentUpon>201807261910049_Roles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807271335247_pickupdays added.resx">
-      <DependentUpon>201807271335247_pickupdays added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807271340008_updated days.resx">
-      <DependentUpon>201807271340008_updated days.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807271544159_remove password update customer.resx">
-      <DependentUpon>201807271544159_remove password update customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807271919406_remove email from classes.resx">
-      <DependentUpon>201807271919406_remove email from classes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807272030166_Custor ID .resx">
-      <DependentUpon>201807272030166_Custor ID .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807272043327_customr Id Add2.resx">
-      <DependentUpon>201807272043327_customr Id Add2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807301539303_pick up day added.resx">
-      <DependentUpon>201807301539303_pick up day added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807301552054_updated pickup.resx">
-      <DependentUpon>201807301552054_updated pickup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807301655033_User Id.resx">
-      <DependentUpon>201807301655033_User Id.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807302043243_test column.resx">
-      <DependentUpon>201807302043243_test column.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311417214_Extra Day.resx">
-      <DependentUpon>201807311417214_Extra Day.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311420089_Remove Xtra Day column.resx">
-      <DependentUpon>201807311420089_Remove Xtra Day column.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311445513_Employee Zip Code Added.resx">
-      <DependentUpon>201807311445513_Employee Zip Code Added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311456249_employee login.resx">
-      <DependentUpon>201807311456249_employee login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311531453_Update Xtra Days Customer.resx">
-      <DependentUpon>201807311531453_Update Xtra Days Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311921293_PickUpStatus.resx">
-      <DependentUpon>201807311921293_PickUpStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311924518_pick confiratin updat.resx">
-      <DependentUpon>201807311924518_pick confiratin updat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311930275_pickupconfirmatins.resx">
-      <DependentUpon>201807311930275_pickupconfirmatins.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807312000297_confirmation.resx">
-      <DependentUpon>201807312000297_confirmation.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808011455364_init.resx">
+      <DependentUpon>201808011455364_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808011508472_extra day.resx">
+      <DependentUpon>201808011508472_extra day.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

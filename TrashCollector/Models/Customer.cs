@@ -35,7 +35,7 @@ namespace TrashCollector.Models
         public int PickUpDayId { get; set; }
         
         [Display(Name = "Extra Pick Up")]
-        public int XtraDayPickUp { get; set; }
+        public int ExtraDayPickUp { get; set; }
 
         public PickUpDays PickUpDay { get; set; }
 
