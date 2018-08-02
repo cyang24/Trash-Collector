@@ -113,15 +113,13 @@ namespace TrashCollector.Controllers
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
-            
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Customer customer = db.Customers.Find(id);
             customer.PickUpDays = db.PickUpDays.ToList();
-       
+
             if (customer == null)
             {
                 return HttpNotFound();
@@ -132,9 +130,11 @@ namespace TrashCollector.Controllers
         // POST: Customers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID,ExtraDayPickUp")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,PickUpDayID,ExtraDayPickUp,Invoice,Confirmation")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -144,6 +144,41 @@ namespace TrashCollector.Controllers
             }
             return View(customer);
         }
+
+        // GET: Customers/Edit/5
+        //[Authorize(Roles = "Employee")]
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Customer customer = db.Customers.Find(id);
+        //    customer.PickConfirmations = db.PickUpConfirmations.ToList();
+
+        //    if (customer == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(customer);
+        //}
+
+        // POST: Customers/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit([Bind(Include = "Invoice,PickUpStatus")] Customer customer)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(customer).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Details", new { id = customer.Id });
+        //    }
+        //    return View(customer);
+        //}
+
 
         // GET: Customers/Delete/5
         public ActionResult Delete(int? id)

@@ -17,17 +17,17 @@ namespace TrashCollector.Controllers
         // GET: PickUpConfirmations
         public ActionResult Index()
         {
-            return View(db.PickUpConfirmations.ToList());
+            return View(db.pickUpConfirmations.ToList());
         }
 
         // GET: PickUpConfirmations/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            PickUpConfirmation pickUpConfirmation = db.pickUpConfirmations.Find(id);
             if (pickUpConfirmation == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PickUpStatus")] PickUpConfirmation pickUpConfirmation)
+        public ActionResult Create([Bind(Include = "Id,Confirmation")] PickUpConfirmation pickUpConfirmation)
         {
             if (ModelState.IsValid)
             {
-                db.PickUpConfirmations.Add(pickUpConfirmation);
+                db.pickUpConfirmations.Add(pickUpConfirmation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -59,13 +59,13 @@ namespace TrashCollector.Controllers
         }
 
         // GET: PickUpConfirmations/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            PickUpConfirmation pickUpConfirmation = db.pickUpConfirmations.Find(id);
             if (pickUpConfirmation == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace TrashCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PickUpStatus")] PickUpConfirmation pickUpConfirmation)
+        public ActionResult Edit([Bind(Include = "Id,Confirmation")] PickUpConfirmation pickUpConfirmation)
         {
             if (ModelState.IsValid)
             {
@@ -90,13 +90,13 @@ namespace TrashCollector.Controllers
         }
 
         // GET: PickUpConfirmations/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
+            PickUpConfirmation pickUpConfirmation = db.pickUpConfirmations.Find(id);
             if (pickUpConfirmation == null)
             {
                 return HttpNotFound();
@@ -107,10 +107,10 @@ namespace TrashCollector.Controllers
         // POST: PickUpConfirmations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            PickUpConfirmation pickUpConfirmation = db.PickUpConfirmations.Find(id);
-            db.PickUpConfirmations.Remove(pickUpConfirmation);
+            PickUpConfirmation pickUpConfirmation = db.pickUpConfirmations.Find(id);
+            db.pickUpConfirmations.Remove(pickUpConfirmation);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

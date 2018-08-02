@@ -206,19 +206,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808011455364_init.cs" />
-    <Compile Include="Migrations\201808011455364_init.Designer.cs">
-      <DependentUpon>201808011455364_init.cs</DependentUpon>
+    <Compile Include="Migrations\201808020253140_init.cs" />
+    <Compile Include="Migrations\201808020253140_init.Designer.cs">
+      <DependentUpon>201808020253140_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808011508472_extra day.cs" />
-    <Compile Include="Migrations\201808011508472_extra day.Designer.cs">
-      <DependentUpon>201808011508472_extra day.cs</DependentUpon>
+    <Compile Include="Migrations\201808020305548_change table.cs" />
+    <Compile Include="Migrations\201808020305548_change table.Designer.cs">
+      <DependentUpon>201808020305548_change table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020313495_updat tabl.cs" />
+    <Compile Include="Migrations\201808020313495_updat tabl.Designer.cs">
+      <DependentUpon>201808020313495_updat tabl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020433271_update invoice.cs" />
+    <Compile Include="Migrations\201808020433271_update invoice.Designer.cs">
+      <DependentUpon>201808020433271_update invoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\keyAttribute.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PickUpConfirmation.cs" />
     <Compile Include="Models\PickUpDays.cs" />
@@ -235,7 +244,10 @@
     <Content Include="Content\bootstrap_simplex.min.css" />
     <Content Include="Content\custom.css" />
     <Content Include="Content\garbage truck.jpg" />
+    <Content Include="Content\jay-clark-600280-unsplash.jpg" />
+    <Content Include="Content\jilbert-ebrahimi-691926-unsplash.jpg" />
     <Content Include="Content\mintly.bootstrap.css" />
+    <Content Include="Content\shane-rounce-268118-unsplash.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -362,11 +374,17 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808011455364_init.resx">
-      <DependentUpon>201808011455364_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808020253140_init.resx">
+      <DependentUpon>201808020253140_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808011508472_extra day.resx">
-      <DependentUpon>201808011508472_extra day.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808020305548_change table.resx">
+      <DependentUpon>201808020305548_change table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020313495_updat tabl.resx">
+      <DependentUpon>201808020313495_updat tabl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020433271_update invoice.resx">
+      <DependentUpon>201808020433271_update invoice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

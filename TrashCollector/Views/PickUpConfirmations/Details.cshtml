@@ -10,9 +10,17 @@
     <h4>PickUpConfirmation</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Confirmation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Confirmation)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PickUpStatus }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

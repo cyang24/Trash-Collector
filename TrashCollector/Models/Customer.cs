@@ -26,7 +26,16 @@ namespace TrashCollector.Models
         public int ZipCode { get; set; }
 
         [Display(Name = "Invoice")]
-        public double Invoice { get; }
+        public double Invoice { get; set; }
+
+        [Display(Name = "Pick Up Confirmation")]
+        public string Confirmation { get; set; }
+
+        [Display(Name = "Suspend Pick Up Start")]
+        public string DateStart { get; set; }
+
+        [Display(Name = "Suspend Pick Up End")]
+        public string DateEnd { get; set; }
 
 
         [ForeignKey("PickUpDay")]
@@ -42,19 +51,17 @@ namespace TrashCollector.Models
         public IEnumerable<PickUpDays> PickUpDays { get; set; }
 
 
-
-        [ForeignKey("PickUpConfirmation")]
-
-        [Display(Name = "Pick Up Status")]
-        public string PickUpStatus { get; set; }
-        public PickUpConfirmation PickUpConfirmation{ get; set; }
-
-        public IEnumerable<PickUpConfirmation> PickConfirmations { get; set; }
-
         [ForeignKey("User")]
         public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
 
+        //[ForeignKey("PickUpConfirmation")]
+
+        //[Display(Name = "Pick Up Status")]
+        //public int PickUpConfirmID { get; set; }
+        //public PickUpConfirmation PickUpConfirmation { get; set; }
+
+        //public IEnumerable<PickUpConfirmation> PickUpConfirmations { get; set; }
 
 
 
