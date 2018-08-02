@@ -231,6 +231,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PickUpConfirmation.cs" />
     <Compile Include="Models\PickUpDays.cs" />
+    <Compile Include="myFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

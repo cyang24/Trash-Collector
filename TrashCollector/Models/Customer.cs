@@ -31,10 +31,10 @@ namespace TrashCollector.Models
         [Display(Name = "Pick Up Confirmation")]
         public string Confirmation { get; set; }
 
-        [Display(Name = "Suspend Pick Up Start")]
+        [Display(Name = "Suspend Start")]
         public string DateStart { get; set; }
 
-        [Display(Name = "Suspend Pick Up End")]
+        [Display(Name = "Suspend End")]
         public string DateEnd { get; set; }
 
 
