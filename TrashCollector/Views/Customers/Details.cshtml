@@ -15,7 +15,7 @@
     }
 </style>
 
-<div class="row">
+<div class="row" style="float:right;">
     <div id="map"></div>
     <script>
         var map;
@@ -37,81 +37,80 @@
 </div>
 
 
-<div class="mapApi">
 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+    
+        <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ZipCode)
+                </dt>
+       
+                <dd>
+                    @Html.DisplayFor(model => model.ZipCode)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PickUpDay)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PickUpDay.DayOfTheWeek)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ZipCode)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PickUpDay)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PickUpDay.DayOfTheWeek)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ExtraDayPickUp)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ExtraDayPickUp)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateStart)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DateStart)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateEnd)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DateEnd)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ExtraDayPickUp)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ExtraDayPickUp)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DateStart)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateStart)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DateEnd)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateEnd)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Confirmation)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Confirmation)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Confirmation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Confirmation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Invoice)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Invoice)
-        </dd>
-    </dl>
-</div>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Invoice)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Invoice)
+                </dd>
+        </dl>
 
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
